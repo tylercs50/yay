@@ -1,0 +1,61 @@
+.img-center
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body
+{
+    font-family: 'Comfortaa', cursive;
+}
+
+#cinnamoroll
+{
+    margin-top: 5vh;
+}
+
+#button-1
+{
+    background-color: green;
+    color: white;
+    border-radius: 20%;
+    width: 125px;
+    height: 125px;
+    margin-top: 7vh;
+    margin-right: 2vh;
+    max-width: 360px;
+    max-height: 360px;
+}
+
+#button-2
+{
+    font-size: .7vw;
+    background-color: red;
+    color: white;
+    border-radius: 20%;
+    width: 125px;
+    height: 125px;
+    margin-top: 7vh;
+    margin-left: 2vh
+}
+
+#proposal
+{
+    color: pink;
+    margin-top: 2vh;
+    font-size: 3rem;
+}
+
+#yay
+{
+    margin-top: 4vh;
+}
+
+#yay-text
+{
+    color: pink;
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 2vh;
+}
