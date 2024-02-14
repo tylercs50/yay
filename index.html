@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="en"></html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width initial-scale= 1">
+    <meta charset="utf-8">
+    <title>i love u!!</title>
+</head>
+<body>
+    <div class="img-center">
+        <img id="cinnamoroll"src="honey.gif" alt="i love u honey" draggable="false">
+    </div>
+    <div id="proposal" style="text-align: center">
+        <p>Will you be my Valentines?</p>
+    </div>
+    <div class="img-center">
+        <button id="button-1" type="button">
+            yes!
+        </button>
+        <button id="button-2" type="button">
+            no.
+        </button>
+    </div>
+    <script>
+        let yay_button = document.getElementById("button-1")
+        let yay_button_style = window.getComputedStyle(yay_button);
+        let yay_button_width = parseInt(yay_button_style.width);
+        let yay_button_height = parseInt(yay_button_style.height);
+
+        yay_button.addEventListener('click', function(){
+            window.location.href = "success.html"
+        })
+
+        let deny_button = document.getElementById("button-2");
+        let count = 0;
+        let whyWrapper = function(event) {
+            count = why(event, count)
+        }
+
+        deny_button.addEventListener('click', whyWrapper);
+        deny_button.addEventListener('click', function(){
+            let new_width = yay_button_width + 25;
+            let new_height = yay_button_height + 25;
+            yay_button.style.width = `${new_width}px`;
+            yay_button.style.height = `${new_height}px`;
+
+            yay_button_width = new_width;
+            yay_button_height = new_height;
+        })
+
+        function why(event, count)
+        {
+            let button = event.target;
+            count += 1;
+            let reasons = {
+                "1": "are you sure about this? :(",
+                "2": "rethink this through!!!!",
+                "3": "this is a mistake right!!",
+                "4": "cmon give it one hard thought about it!!",
+                "5": "haha funny!! please consider it again!!",
+                "6": "are.. you really sure about this :(",
+                "7": "i know you're just playing around right!!.. right?",
+                "8": "one last chance?",
+                "9": "please please please please please please please"
+            };
+
+            if (count <= 9)
+            {
+                button.textContent = reasons[count];
+            }
+            else
+            {
+                button.textContent = reasons[9];
+            }
+            return count;
+        }
+    </script>
+</body>
